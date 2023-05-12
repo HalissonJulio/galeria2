@@ -1,5 +1,6 @@
 package pereira.lopes.julio.galeria2;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -14,5 +15,8 @@ public class PhotoActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.tbPhoto);
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getSupportActionBar();
+            actionBar.setDisplayHomeAsUpEnabled(true);
     }
 }
