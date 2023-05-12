@@ -3,6 +3,7 @@ package pereira.lopes.julio.galeria2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Toolbar;
 
 public class PhotoActivity extends AppCompatActivity {
 
@@ -10,5 +11,8 @@ public class PhotoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
+
+        Toolbar toolbar = findViewById(R.id.tbPhoto);
+        setContentView(R.layout.activity_main);
     }
 }
