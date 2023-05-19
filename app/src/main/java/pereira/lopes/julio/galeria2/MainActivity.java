@@ -1,10 +1,12 @@
 package pereira.lopes.julio.galeria2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,5 +24,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater1 = getMenuInflater();
         return true;
+    }
+    @Override
+    public boolean onOptionsItemsSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.opCamera:
+                dispatchTakePictureIntent();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

@@ -1,11 +1,13 @@
 package pereira.lopes.julio.galeria2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toolbar;
 
 public class PhotoActivity extends AppCompatActivity {
@@ -29,4 +31,18 @@ public class PhotoActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.opShare:
+                sharePhoto();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void sharePhoto() {
+
+    }
 }
