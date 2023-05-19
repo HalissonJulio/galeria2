@@ -14,6 +14,16 @@
         <activity
             android:name=".PhotoActivity"
             android:exported="false" />
+        <provider
+            android:authorities="pereira.lopes.julio.galeria.provider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grandUriPermissins="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
         <activity
             android:name=".MainActivity"
             android:exported="true">
