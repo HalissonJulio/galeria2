@@ -68,6 +68,7 @@ public class PhotoActivity extends AppCompatActivity {
             } else {
                 File f = new File(currentPhotoPath);
                 f.delete();
+
             }
         }
     }
