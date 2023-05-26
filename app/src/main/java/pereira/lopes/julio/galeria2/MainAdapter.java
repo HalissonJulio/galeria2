@@ -32,7 +32,7 @@ public class MainAdapter extends RecyclerView.Adapter{
         imPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
                 public void onClick(View v) {
-                mainActivity.startActivity(photos.get(position));
+                    mainActivity.startActivity(photos.get(position));
             }
         });
     }
